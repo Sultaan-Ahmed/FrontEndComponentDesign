@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #293746;
+  display: flex;
+  position: relative;
+}
+.container {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0%;
+  left: 0%;
+}
+.circleWrapper {
+  position: absolute;
+  bottom: 0%;
+  display: flex;
+  width: 100%;
+}
+.circle {
+  margin: 0 1vmax;
+  width: 2vmax;
+  height: 2vmax;
+  box-shadow: 0 0 10px aqua, 0 0 20px aqua;
+  background-color: aqua;
+  border-radius: 50%;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(100s / var(--i));
+}
+.circle:nth-child(even) {
+  box-shadow: 0 0 10px deeppink, 0 0 20px deeppink;
+  background-color: deeppink;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}

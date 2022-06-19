@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 14, 0.911);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 30vw;
+  height: 50vh;
+  background-color: rgba(0, 0, 14, 0.911);
+  border-radius: 10px;
+}
+.inputWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 80%;
+  padding: 10px;
+}
+.inputWrapper > input {
+  background: transparent;
+  padding: 10px 15px;
+  outline: none;
+  color: white;
+  border: 1px solid rgb(102, 110, 117);
+  border-radius: 5px;
+  font-size: 10px;
+}
+.inputWrapper > span {
+  color: rgb(102, 110, 117);
+  position: absolute;
+  left: 10%;
+  font-size: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s ease;
+}
+.inputWrapper input:valid ~ span,
+.inputWrapper input:focus ~ span {
+  color: aqua;
+  transform: translate(10px, -20px);
+  background-color: black;
+  border-left: 1px solid aqua;
+  border-right: 1px solid aqua;
+  padding: 2px;
+}

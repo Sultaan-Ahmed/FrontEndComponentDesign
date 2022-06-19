@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(45deg, aqua, aquamarine);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle {
+  position: relative;
+  width: 10vmax;
+  height: 10vmax;
+  border-radius: 50%;
+  box-shadow: 10vmax 2vmax 0 darkorchid;
+  background-color: deeppink;
+}
+.circle::after {
+  position: absolute;
+  content: "";
+  left: 0%;
+  top: -100%;
+  width: 10vmax;
+  height: 10vmax;
+  border-radius: 50%;
+  background-color: dodgerblue;
+}
+.circle::before {
+  position: absolute;
+  content: "";
+  left: 0%;
+  top: 100%;
+  width: 10vmax;
+  height: 10vmax;
+  border-radius: 50%;
+  background-color: dodgerblue;
+}
